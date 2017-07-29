@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Management System</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts/font-awesome/css/iconfont.css">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/web.css">
+
+    <!--https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css-->
+    <link rel="stylesheet" href="css/libs/jquery.dataTables.min.css">
+
+    <!--bootstrap treeView css-->
+    <link rel="stylesheet" href="css/libs/bootstrap-treeview.min.css">
+
+    <script src="js/libs/respond.js"></script>
+    <script src="js/libs/html5.js"></script>
+
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <div class="ie-tips">Sorry. 您使用的浏览器版本过旧，为了更好的访问体验，请升级浏览器至<b>IE8以上</b>，推荐使用<a href="http://rj.baidu.com/soft/detail/14744.html?ald" title="Chrome谷歌浏览器"target="_blank">Chrome谷歌浏览器</a><a class="js-tip-close" title="关闭">关闭</a></div>
+    <script type="text/javascript">var ie67=true;</script>
+    <![endif]-->
+
+    <header>
+        <div class="col-lg-12">
+            <img src="images/logo.png" alt="">
+            <div class="msgInfo fr">
+                <a href="javascript:void(0);">
+                    <i class="iconfont icon-meiyouxiaoxi"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div id="content" class="main-wrapper">
+            <div id="mytab" class="left-wrapper">
+                <div class="left">
+                    <ul>
+                        <li class="active">
+                            <a href="#system" data-toggle="tab" aria-expanded="true"><i class="iconfont icon-left-xtcdgl"></i></a>
+                        </li>
+                        <li>
+                            <a href="#personnel" data-toggle="tab" aria-expanded="true"><i class="iconfont icon-renshiguanli1"></i></a>
+                        </li>
+                        <li>
+                            <a href="#menu3" data-toggle="tab" aria-expanded="true"><i class="iconfont icon-diannaoshuju"></i></a>
+                        </li>
+                        <li>
+                            <a href="#menu4" data-toggle="tab" aria-expanded="true"><i class="iconfont icon-manage-author"></i></a>
+                        </li>
+                        <li>
+                            <a href="#menu5" data-toggle="tab" aria-expanded="true"><i class="iconfont icon-documentfolder"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <i class="iconfont icon-leftarrowl jsExpand"></i>
+                    <div id="myTabContent" class="tab-content">
+                        <ul class="menus tab-pane fade active in" id="system">
+                            <div id="tree" class="tree"></div>
+                        </ul>
+                        <ul class="menus tab-pane fade" id="personnel">
+                            <div id="tree1" class="tree"></div>
+                        </ul>
+                        <ul class="menus tab-pane fade" id="menu3">
+                            <h2>menu3</h2>
+                            <!--<div class="topMenu">-->
+                                <!--<a href="javascript:void(0);" class="jsMenu">人事管理</a>-->
+                                <!--<div class="childMenu">-->
+                                    <!--<li class="active">-->
+                                        <!--<a href="javascript:void(0);">部门管理</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="javascript:void(0);">员工管理</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="javascript:void(0);">角色管理</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="javascript:void(0);">岗位管理</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="javascript:void(0);">岗位说明书管理</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="javascript:void(0);">指标库管理</a>-->
+                                    <!--</li>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="topMenu">-->
+                                <!--<a href="javascript:void(0);" class="jsMenu">绩效考核</a>-->
+                            <!--</div>-->
+                            <!--<div class="topMenu">-->
+                                <!--<a href="javascript:void(0);" class="jsMenu">个人中心</a>-->
+                            <!--</div>-->
+                        </ul>
+                        <ul class="menus tab-pane fade" id="menu4">
+                            <h2>menu4</h2>
+                        </ul>
+                        <ul class="menus tab-pane fade" id="menu5">
+                            <h2>menu5</h2>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="table-wrapper">
+                    <div class="operate-pane">
+                        <div class="form-group">
+                            <div class="group">
+                                <label for="">部门：</label>
+                                <div class="controls">
+                                    <select name="" id="" class="span2">
+                                        <option value="">请选择</option>
+                                        <option value="jishubu">技术部</option>
+                                        <option value="caiwubu">财务部</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <label for="">考核类型：</label>
+                                <div class="controls">
+                                    <select name="" id="" class="span2">
+                                        <option value="">请选择</option>
+                                        <option value="jishubu">技术部</option>
+                                        <option value="caiwubu">财务部</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <label for="">考核状态：</label>
+                                <div class="controls">
+                                    <select name="" id="" class="span2">
+                                        <option value="">请选择</option>
+                                        <option value="jishubu">技术部</option>
+                                        <option value="caiwubu">财务部</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <label for="">考核时间：</label>
+                                <div class="controls">
+                                    <select name="" id="" class="span2">
+                                        <option value="">请选择</option>
+                                        <option value="jishubu">技术部</option>
+                                        <option value="caiwubu">财务部</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <label for="">关键字：</label>
+                                <div class="controls">
+                                    <input type="text" placeholder="请输入要搜索的关键字">
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">提交</button>
+                        </div>
+                    </div>
+                    <table id="example" class="display" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>字典项名称</th>
+                            <th>所属模块</th>
+                            <th>是否启用</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="http://f3.v.veimg.cn/f2e/gallery/jquery/1.11.1/jquery-1.11.1.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/bootstrap-treeview.js"></script>
+    <script src="js/libs/jquery.dataTables.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        var tree = [
+            {
+                text: "人事管理",
+                nodes: [
+                    {
+                        text: "部门管理",
+                        nodes: [
+                            {
+                                text: "技术部"
+                            },
+                            {
+                                text: "市场部"
+                            }
+                        ]
+                    },
+                    {
+                        text: "员工管理"
+                    },
+                    {
+                        text: "角色管理"
+                    },
+                    {
+                        text: "岗位管理"
+                    },
+                    {
+                        text: "岗位说明书管理"
+                    },
+                    {
+                        text: "指标库管理"
+                    }
+                ]
+            },
+            {
+                text: "绩效考核"
+            },
+            {
+                text: "个人中心"
+            }
+        ];
+
+        $('#tree').treeview({
+//            expandIcon: "glyphicon glyphicon-stop",
+//            collapseIcon: "glyphicon glyphicon-unchecked",
+//            nodeIcon: "glyphicon glyphicon-user",
+//            color: "yellow",
+//            backColor: "purple",
+//            onhoverColor: "orange",
+//            borderColor: "red",
+//            showBorder: false,
+//            showTags: true,
+//            highlightSelected: true,
+//            selectedColor: "yellow",
+//            selectedBackColor: "darkorange",
+            data: tree,
+            showCheckbox: false,   //是否显示复选框
+        });
+
+        $('#tree1').treeview({
+            data:tree,
+        })
+    </script>
+</body>
+</html>
