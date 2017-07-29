@@ -1,0 +1,27 @@
+{
+  "name": "managesystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bs-config.js",
+  "dependencies": {},
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miracle66/ManageSystem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miracle66/ManageSystem/issues"
+  },
+  "homepage": "https://github.com/miracle66/ManageSystem#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11"
+  }
+}
