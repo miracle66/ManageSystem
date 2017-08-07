@@ -21,6 +21,7 @@ header{
      .msgInfo{
        i{
          font-size:30px;
+         color: $mainBackground;
        }
      }
     img{
@@ -144,6 +145,8 @@ header{
               border:1px solid $borderBottom;
               padding:6px 0 6px 10px;
               color: #999;
+              height:35px;
+              line-height:35px;
             }
             input{
               padding:8px 0 8px 10px;

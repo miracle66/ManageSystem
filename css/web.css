@@ -12,7 +12,8 @@ header > div {
   top: 0;
   z-index: 9999; }
   header > div .msgInfo i {
-    font-size: 30px; }
+    font-size: 30px;
+    color: #f08200; }
   header > div img {
     width: 170px; }
 
@@ -101,6 +102,8 @@ header > div {
           width: 210px;
           border: 1px solid #e5e5e5;
           padding: 6px 0 6px 10px;
-          color: #999; }
+          color: #999;
+          height: 35px;
+          line-height: 35px; }
         .main-wrapper .content-wrapper .table-wrapper .operate-pane .group .controls input {
           padding: 8px 0 8px 10px; }
