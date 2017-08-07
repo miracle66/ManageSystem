@@ -5,7 +5,8 @@
   "main": "bs-config.js",
   "dependencies": {},
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "start": "browser-sync start --config ./bs-config.js"
   },
   "repository": {
     "type": "git",
