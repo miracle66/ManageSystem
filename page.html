@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div id="pageTool"></div>
-		<div id="pageToolbar"></div>
+		<div id="pager"></div>
 		<script type="text/javascript" src="http://www.jq22.com/demo/paging-master20160927/src/jquery-1.11.2.js"></script>
 		<script type="text/javascript" src="http://www.jq22.com/demo/paging-master20160927/src/query.js"></script>
 		<script type="text/javascript" src="http://www.jq22.com/demo/paging-master20160927/src/paging.js"></script>
@@ -17,9 +17,9 @@
 			console.log(arguments)
 			alert('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
 			}});
-		// $('#pageToolbar').Paging({pagesize:10,count:85,toolbar:true,callback:function(page,size,count){
-		// 	console.log(page);
-		// }});
+		$('#pager').Paging({pagesize:10,count:85,toolbar:true,callback:function(page,size,count){
+			console.log(page);
+		}});
 		</script>
 	</body>
 </html>
