@@ -65,7 +65,7 @@ body {
 }
 a,
 a:link {
-    color: #666;
+    /*color: #666;*/
     text-decoration: none;
 }
 a:focus {

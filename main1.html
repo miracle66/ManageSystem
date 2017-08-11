@@ -16,8 +16,8 @@
     <!--bootstrap treeView css-->
     <link rel="stylesheet" href="css/libs/bootstrap-treeview.min.css">
 
-    <script src="js/libs/respond.js"></script>
-    <script src="js/libs/html5.js"></script>
+    <script src="js/libs/respond.min.js"></script>
+    <script src="js/libs/html5shiv.min.js"></script>
 
 </head>
 <body>
@@ -180,69 +180,30 @@
     <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/libs/bootstrap-treeview.js"></script>
     <script src="js/libs/jquery.dataTables.min.js"></script>
-    <script src="js/main.js"></script>
-
+    <script src="js/page-treeView.js"></script>
     <script>
-        var tree = [
-            {
-                text: "人事管理",
-                nodes: [
-                    {
-                        text: "部门管理",
-                        nodes: [
-                            {
-                                text: "技术部"
-                            },
-                            {
-                                text: "市场部"
-                            }
-                        ]
-                    },
-                    {
-                        text: "员工管理"
-                    },
-                    {
-                        text: "角色管理"
-                    },
-                    {
-                        text: "岗位管理"
-                    },
-                    {
-                        text: "岗位说明书管理"
-                    },
-                    {
-                        text: "指标库管理"
-                    }
-                ]
-            },
-            {
-                text: "绩效考核"
-            },
-            {
-                text: "个人中心"
-            }
-        ];
-
-        $('#tree').treeview({
-//            expandIcon: "glyphicon glyphicon-stop",
-//            collapseIcon: "glyphicon glyphicon-unchecked",
-//            nodeIcon: "glyphicon glyphicon-user",
-//            color: "yellow",
-//            backColor: "purple",
-//            onhoverColor: "orange",
-//            borderColor: "red",
-//            showBorder: false,
-//            showTags: true,
-//            highlightSelected: true,
-//            selectedColor: "yellow",
-//            selectedBackColor: "darkorange",
-            data: tree,
-            showCheckbox: false,   //是否显示复选框
-        });
-
-        $('#tree1').treeview({
-            data:tree,
-        })
+        $('#example').DataTable( {
+            "ajax": './data.json',
+            "oLanguage": {
+                "sLengthMenu": "每页显示 _MENU_ 条记录",
+                "sZeroRecords": "对不起，查询不到任何相关数据",
+                "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条记录",
+                "sInfoEmtpy": "找不到相关数据",
+                "sInfoFiltered": "数据表中共为 _MAX_ 条记录)",
+                "sProcessing": "正在加载中...",
+                "sSearch": "搜索",
+                "sUrl": "", //多语言配置文件，可将oLanguage的设置放在一个txt文件中，例：Javascript/datatable/dtCH.txt
+                "oPaginate": {
+                    "sFirst":    "第一页",
+                    "sPrevious": " 上一页 ",
+                    "sNext":     " 下一页 ",
+                    "sLast":     " 最后一页 "
+                }
+            }, //多语言配置
+        } );
+        function itemOnclick($this) {
+            console.log($this);
+        }
     </script>
 </body>
 </html>

@@ -11,13 +11,15 @@
     <link rel="stylesheet" href="css/web.css">
 
     <!--https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css-->
-    <link rel="stylesheet" href="css/libs/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/libs/bootstrap1.min.css"> <!--页面输入框样式-->
+    <link rel="stylesheet" href="css/libs/dataTables.bootstrap.css">
 
     <!--bootstrap treeView css-->
-    <link rel="stylesheet" href="css/libs/bootstrap-treeview.min.css">
+    <!--<link rel="stylesheet" href="css/libs/bootstrap-treeview.min.css">-->
+    <link rel="stylesheet" href="css/libs/jquery.dataTables.min.css">
 
-    <script src="js/libs/respond.js"></script>
-    <script src="js/libs/html5.js"></script>
+    <script src="js/libs/respond.min.js"></script>
+    <script src="js/libs/html5shiv.min.js"></script>
 
 </head>
 <body>
@@ -62,19 +64,19 @@
                     <i class="iconfont icon-leftarrowl jsExpand"></i>
                     <div id="myTabContent" class="tab-content">
                         <ul class="menus tab-pane fade active in" id="system">
-                            <div id="tree" class="tree"></div>
+                            <div class="tree"></div>
                         </ul>
                         <ul class="menus tab-pane fade" id="personnel">
-                            <div id="tree1" class="tree"></div>
+                            <div class="tree"></div>
                         </ul>
                         <ul class="menus tab-pane fade" id="menu3">
-                            <h2>menu3</h2>
+                            <div class="tree"></div>
                         </ul>
                         <ul class="menus tab-pane fade" id="menu4">
-                            <h2>menu4</h2>
+                            <div class="tree"></div>
                         </ul>
                         <ul class="menus tab-pane fade" id="menu5">
-                            <h2>menu5</h2>
+                            <div class="tree"></div>
                         </ul>
                     </div>
                 </div>
@@ -132,7 +134,7 @@
                             <button class="btn btn-primary">提交</button>
                         </div>
                     </div>
-                    <table id="example" class="display" cellspacing="0" width="100%">
+                    <table class="table-striped table-hover datatable dataTable" class="display" cellspacing="0" width="100%">
                         <thead>
                         <tr>
                             <th>字典项名称</th>
@@ -151,57 +153,8 @@
     <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/libs/bootstrap-treeview.js"></script>
     <script src="js/libs/jquery.dataTables.min.js"></script>
-    <script src="js/main.js"></script>
-
-    <script>
-        var tree = [
-            {
-                text: "人事管理",
-                nodes: [
-                    {
-                        text: "部门管理",
-                        nodes: [
-                            {
-                                text: "技术部"
-                            },
-                            {
-                                text: "市场部"
-                            }
-                        ]
-                    },
-                    {
-                        text: "员工管理"
-                    },
-                    {
-                        text: "角色管理"
-                    },
-                    {
-                        text: "岗位管理"
-                    },
-                    {
-                        text: "岗位说明书管理"
-                    },
-                    {
-                        text: "指标库管理"
-                    }
-                ]
-            },
-            {
-                text: "绩效考核"
-            },
-            {
-                text: "个人中心"
-            }
-        ];
-
-        $('#tree').treeview({
-            data: tree,
-            showCheckbox: false,   //是否显示复选框
-        });
-
-        $('#tree1').treeview({
-            data:tree,
-        })
-    </script>
+    <script src="js/libs/dataTables.bootstrap.js"></script>
+    <script src="js/page-dataTable.js"></script>
+    <script src="js/page-treeView.js"></script>
 </body>
 </html>

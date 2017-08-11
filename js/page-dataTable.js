@@ -16,7 +16,7 @@ $(document).on('click','.left ul li',function () {
 
 
 // datatable 示例
-$('#example').DataTable( {
+$('.dataTable').DataTable( {
     "ajax": './data.json',
     "oLanguage": {
         "sLengthMenu": "每页显示 _MENU_ 条记录",
@@ -35,6 +35,7 @@ $('#example').DataTable( {
         }
     }, //多语言配置
 } );
+
 
 function itemOnclick($this) {
     console.log($this);
