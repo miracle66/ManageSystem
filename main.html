@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <title>Management System</title>
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts/font-awesome/css/iconfont.css">
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/web.css">
 
     <!--https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css-->
-    <link rel="stylesheet" href="css/libs/bootstrap1.min.css"> <!--页面输入框样式-->
+    <!--<link rel="stylesheet" href="css/libs/bootstrap1.min.css"> &lt;!&ndash;页面输入框样式&ndash;&gt;-->
     <link rel="stylesheet" href="css/libs/dataTables.bootstrap.css">
 
     <!--bootstrap treeView css-->
     <!--<link rel="stylesheet" href="css/libs/bootstrap-treeview.min.css">-->
     <link rel="stylesheet" href="css/libs/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.1.2/css/select.dataTables.min.css">
+    <link rel="stylesheet" href="http://cdn.datatables.net/responsive/2.0.2/css/responsive.dataTables.min.css">
 
     <script src="js/libs/respond.min.js"></script>
     <script src="js/libs/html5shiv.min.js"></script>
@@ -134,15 +137,7 @@
                             <button class="btn btn-primary">提交</button>
                         </div>
                     </div>
-                    <table class="table-striped table-hover datatable dataTable" class="display" cellspacing="0" width="100%">
-                        <thead>
-                        <tr>
-                            <th>字典项名称</th>
-                            <th>所属模块</th>
-                            <th>是否启用</th>
-                            <th>操作</th>
-                        </tr>
-                        </thead>
+                    <table cellpadding="0" cellspacing="0" border="0" class="dataTable table table-striped" id="example">
                     </table>
                 </div>
             </div>
@@ -152,9 +147,17 @@
     <script src="http://f3.v.veimg.cn/f2e/gallery/jquery/1.11.1/jquery-1.11.1.min.js"></script>
     <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/libs/bootstrap-treeview.js"></script>
-    <script src="js/libs/jquery.dataTables.min.js"></script>
-    <script src="js/libs/dataTables.bootstrap.js"></script>
-    <script src="js/page-dataTable.js"></script>
+    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.1.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.1.2/js/dataTables.select.min.js"></script>
+    <script src="http://cdn.datatables.net/responsive/2.0.2/js/dataTables.responsive.min.js"></script>
+    <script src="http://kingkode.com/datatables.editor.lite/js/altEditor/dataTables.altEditor.free.js"></script>
+    <!--<script src="js/libs/dataTables.bootstrap.js"></script>-->
+    <!--<script src="js/page-dataTable.js"></script>-->
+    <!--<script src="js/libs/dataTables.buttons.min.js"></script>-->
+    <!--<script src="js/libs/dataTables.select.min.js"></script>-->
+    <!--<script src="js/libs/dataTables.editor.js"></script>-->
     <script src="js/page-treeView.js"></script>
+    <script src="js/main-dataTable.js"></script>
 </body>
 </html>
