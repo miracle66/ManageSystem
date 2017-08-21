@@ -45,5 +45,5 @@ var tree = [
 
 $('.tree').treeview({
     data: tree,
-    showCheckbox: true,   //是否显示复选框
+    showCheckbox: false,   //是否显示复选框
 });
