@@ -4,22 +4,17 @@
     <meta charset="UTF-8">
     <title>Management System</title>
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts/font-awesome/css/iconfont.css">
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/web.css">
 
     <!--https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css-->
-    <!--<link rel="stylesheet" href="css/libs/bootstrap1.min.css"> &lt;!&ndash;页面输入框样式&ndash;&gt;-->
-    <link rel="stylesheet" href="css/libs/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="css/libs/jquery.dataTables.min.css">
 
     <!--bootstrap treeView css-->
-    <!--<link rel="stylesheet" href="css/libs/bootstrap-treeview.min.css">-->
-    <link rel="stylesheet" href="css/libs/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="css/cdn/buttons.dataTables.min.css">
-    <link rel="stylesheet" href="css/cdn/select.dataTables.min.css">
-    <link rel="stylesheet" href="css/cdn/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="css/libs/bootstrap-treeview.min.css">
 
     <script src="js/libs/respond.min.js"></script>
     <script src="js/libs/html5shiv.min.js"></script>
@@ -137,7 +132,15 @@
                             <button class="btn btn-primary">提交</button>
                         </div>
                     </div>
-                    <table cellpadding="0" cellspacing="0" border="0" class="dataTable table table-striped" id="example">
+                    <table cellpadding="0" cellspacing="0" border="0" id="example">
+                        <thead>
+                        <tr>
+                            <th>字典项名称</th>
+                            <th>所属模块</th>
+                            <th>是否启用</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
                     </table>
                 </div>
             </div>
@@ -148,15 +151,37 @@
     <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/libs/bootstrap-treeview.js"></script>
 
-    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-    <script src="js/cdn/dataTables.buttons.min.js"></script>
-    <script src="js/cdn/dataTables.select.min.js"></script>
-    <script src="js/cdn/dataTables.responsive.min.js"></script>
-    <script src="js/cdn/dataTables.altEditor.free.js"></script>
+    <!--<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>-->
+    <!--<script src="js/cdn/dataTables.buttons.min.js"></script>-->
+    <!--<script src="js/cdn/dataTables.select.min.js"></script>-->
+    <!--<script src="js/cdn/dataTables.responsive.min.js"></script>-->
+    <!--<script src="js/cdn/dataTables.altEditor.free.js"></script>-->
+    <script src="js/libs/jquery.dataTables.min.js"></script>
     <script src="js/page-treeView.js"></script>
     <!--<script src="js/main-dataTable.js"></script>-->
     <script>
-        $('#example').DataTable();
+        $('#example').DataTable( {
+            "ajax": './data.json',
+            "oLanguage": {
+                "sLengthMenu": "每页显示 _MENU_ 条记录",
+                "sZeroRecords": "对不起，查询不到任何相关数据",
+                "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条记录",
+                "sInfoEmtpy": "找不到相关数据",
+                "sInfoFiltered": "数据表中共为 _MAX_ 条记录)",
+                "sProcessing": "正在加载中...",
+                "sSearch": "搜索",
+                "sUrl": "", //多语言配置文件，可将oLanguage的设置放在一个txt文件中，例：Javascript/datatable/dtCH.txt
+                "oPaginate": {
+                    "sFirst":    "第一页",
+                    "sPrevious": " 上一页 ",
+                    "sNext":     " 下一页 ",
+                    "sLast":     " 最后一页 "
+                }
+            }, //多语言配置
+        } );
+        function itemOnclick($this) {
+            console.log($this);
+        }
     </script>
 </body>
 </html>

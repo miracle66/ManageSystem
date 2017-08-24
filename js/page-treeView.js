@@ -5,40 +5,51 @@
 var tree = [
     {
         text: "人事管理",
+        link: "main_employee.html",
         nodes: [
             {
                 text: "部门管理",
+                link: "main_department.html",
                 nodes: [
                     {
-                        text: "技术部"
+                        text: "技术部",
+                        link: "main_employee2.html"
                     },
                     {
-                        text: "市场部"
+                        text: "市场部",
+                        link: "main_employee3.html"
                     }
                 ]
             },
             {
-                text: "员工管理"
+                text: "员工管理",
+                link: "main_employee4.html"
             },
             {
-                text: "角色管理"
+                text: "角色管理",
+                link: "main_employee5.html"
             },
             {
-                text: "岗位管理"
+                text: "岗位管理",
+                link: "main_employee6.html"
             },
             {
-                text: "岗位说明书管理"
+                text: "岗位说明书管理",
+                link: "main_employee7.html"
             },
             {
-                text: "指标库管理"
+                text: "指标库管理",
+                link: "main_employee8.html"
             }
         ]
     },
     {
-        text: "绩效考核"
+        text: "绩效考核",
+        link: "main_employee9.html"
     },
     {
-        text: "个人中心"
+        text: "个人中心",
+        link: "main_employee10.html"
     }
 ];
 

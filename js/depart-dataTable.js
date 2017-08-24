@@ -7,32 +7,26 @@
         },
         mainTable: function () {
             var columnDefs = [{
-                title: "姓名"
+                title: "部门名称"
             }, {
-                title: "职位"
+                title: "部门人数"
             }, {
-                title: "办公地点"
+                title: "部门领导"
             }, {
                 title: "分机号码."
-            }, {
-                title: "入职日期"
-            }, {
-                title: "薪资"
-            },{
-                title: "所属部门"
             }];
             var myTable;
             myTable = $('#example').DataTable({
                 "sPaginationType": "full_numbers",
                 "bRetrieve": true,
                 // data: dataSet,
-                ajax: './data.json',
+                ajax: './dataDepart.json',
                 columns: columnDefs,
                 dom: 'Bfrtip',        // Needs button container
                 select: 'single',
                 responsive: true,
                 altEditor: {  // Enable altEditor
-                    ajax: './data.json'
+                    ajax: './dataDepart.json'
                 },
                 oLanguage: {
                     "sLengthMenu": "每页显示 _MENU_ 条记录",
@@ -54,16 +48,16 @@
                     text: '新增',
                     name: 'add'        // do not change name
                 },
-                    {
-                        extend: 'selected', // Bind to Selected row
-                        text: '编辑',
-                        name: 'edit'        // do not change name
-                    },
-                    {
-                        extend: 'selected', // Bind to Selected row
-                        text: '删除',
-                        name: 'delete'      // do not change name
-                    }]
+                {
+                    extend: 'selected', // Bind to Selected row
+                    text: '编辑',
+                    name: 'edit'        // do not change name
+                },
+                {
+                    extend: 'selected', // Bind to Selected row
+                    text: '删除',
+                    name: 'delete'      // do not change name
+                }]
             });
         }
     }

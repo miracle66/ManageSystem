@@ -27,6 +27,8 @@
 
 	var _default = {};
 
+	var link;
+
 	_default.settings = {
 
 		injectStyle : true,
@@ -590,6 +592,8 @@
 			} else {
 				// otherwise just text
 				treeItem.append(node.text);
+                var link = node.link;
+				treeItem.append("<div class='jsLink' style='display: none;'>"+ link +"</div>");
 			}
 
 			// Add tags as badges
@@ -1272,6 +1276,7 @@
 				return undefined;
 			}
 		}
+
 	};
 	Tree.prototype.template = {
 		list : '<ul class="list-group"></ul>',
